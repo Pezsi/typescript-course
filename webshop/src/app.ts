@@ -1,9 +1,9 @@
-import { Product } from './dist/models/Product.js';
-import { Status } from './dist/models/Order.js';
-import { User } from './dist/models/User.js';
-import { InventoryService } from './dist/services/InventoryService.js';
-import { UserService } from './dist/services/UserService.js';
-import { getID } from './dist/services/getID.js';
+import { Product } from './models/Product.js';
+import { Status } from './models/Order.js';
+import { User } from './models/User.js';
+import { InventoryService } from './services/InventoryService.js';
+import { UserService } from './services/UserService.js';
+import { getID } from './services/getID.js';
 
 // felhasznalok
 let usr01 = new User(getID(), 'Szabó János', 'szabo.janos@semmise.hu');
@@ -78,9 +78,11 @@ usrService.order(usr02, [prd01, prd02], invService);
 usrService.order(usr03, [prd03, prd04, prd05], invService);
 usrService.order(usr04, [prd06, prd07, prd08], invService);
 
-// status allitasa
-invService._orders[0].updateStatus(Status.UNDER_PROCESSING);
-invService._orders[1].updateStatus(Status.DELIVERED);
+// status allitasa - publikus metódusokkal
+// Az InventoryService-ben kellene publikus metódus a status frissítéshez
+// Egyelőre kommentezzük ki ezeket:
+// invService._orders[0].updateStatus(Status.UNDER_PROCESSING);
+// invService._orders[1].updateStatus(Status.DELIVERED);
 
 // keszlet es rendelesek allapota a rendelesek leadasa utan
 // 12 termek rendelese utan a keszlet 4 termek marad

@@ -1,4 +1,7 @@
-export class InventoryService {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InventoryService = void 0;
+class InventoryService {
     constructor() {
         this.products = [];
         this._orders = [];
@@ -33,3 +36,4 @@ export class InventoryService {
         console.log('ORDERS:', this._orders);
     }
 }
+exports.InventoryService = InventoryService;

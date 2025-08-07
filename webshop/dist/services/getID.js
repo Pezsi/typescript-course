@@ -1,5 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getID = getID;
 const LENGTH_DEFAULT = 32;
-export function getID(length = LENGTH_DEFAULT) {
+function getID(length = LENGTH_DEFAULT) {
     let out = '';
     let characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     if (length < 4 || length > 64) {

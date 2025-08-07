@@ -3,16 +3,25 @@
         "outDir": "./dist",
         "baseUrl": "./src",
         "paths": {
-          "@interfaces/*": ["./src/interfaces/*"],
-          "@models/*": ["./src/models/*"],
-          "@services/*": ["./src/services/*"],
+            "@interfaces/*": ["./interfaces/*"],
+            "@models/*": ["./models/*"],
+            "@services/*": ["./services/*"]
         },
         "sourceMap": false,
         "noImplicitAny": true,
-        "module": "es2015",
-        "target": "es2015",
+        "module": "CommonJS",
+        "target": "ES2020",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true
     },
     "include": [
         "./src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
     ]
 }

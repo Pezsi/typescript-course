@@ -1,4 +1,7 @@
-export class Product {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Product = void 0;
+class Product {
     constructor(id, name, price, description = '') {
         this.id = id;
         this.name = name;
@@ -6,3 +9,4 @@ export class Product {
         this.description = description;
     }
 }
+exports.Product = Product;

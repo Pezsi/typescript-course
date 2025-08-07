@@ -1,4 +1,7 @@
-export class UserService {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserService = void 0;
+class UserService {
     constructor() {
         this._users = [];
     }
@@ -20,3 +23,4 @@ export class UserService {
         console.log('service users:', this._users);
     }
 }
+exports.UserService = UserService;

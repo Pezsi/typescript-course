@@ -1,12 +1,12 @@
-import { Product } from "./Product";
 import { Order } from "./Order";
-import { InventoryService } from "../services/InventoryService";
 import { getID } from "../services/getID";
+import { Product } from "./Product";
+import { InventoryService } from "../services/InventoryService";
 
 export class User
 {
     public id: string;
-    public name: string;
+    public name: string; 
     public email: string;
 
     constructor (id: string, name: string, email: string)
